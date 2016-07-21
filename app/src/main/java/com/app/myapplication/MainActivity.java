@@ -7,16 +7,16 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements RightOrWrongView.CircleListener{
 
-    RightOrWrongView cv;
+    RightOrWrongView rwview;
     TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        cv = (RightOrWrongView) findViewById(R.id.rwview);
+        rwview = (RightOrWrongView) findViewById(R.id.rwview);
         tv = (TextView) findViewById(R.id.tv);
-        cv.setRightOrWrong(RightOrWrongView.RIGHT);
-        cv.setCircleListener(new RightOrWrongView.CircleListener() {
+        rwview.setRightOrWrong(RightOrWrongView.RIGHT);
+        rwview.setCircleListener(new RightOrWrongView.CircleListener() {
             @Override
             public void AnimFinish() {
                 tv.setText("动画执行完毕");
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements RightOrWrongView.
     }
 
     public void onClick(View view) {
-        cv.setRightOrWrong(false);
+        rwview.setRightOrWrong(false);
     }
 
     @Override
