@@ -17,8 +17,8 @@
         android:text="adasdasdasdad"
         android:textSize="24sp"
         android:textColor="@color/colorDarkBlue"/>
-    <com.app.myapplication.CircleView
-        android:id="@+id/cv"
+    <com.app.myapplication.RightOrWrongView
+        android:id="@+id/rwview"
         android:layout_width="200dp"
         android:layout_height="200dp"
         hj:circleWidth = "200dp"

@@ -15,7 +15,7 @@ import java.util.List;
  * Created by HJ on 2016/4/19 0019.
  * 自定义球形View
  */
-public class CircleView extends View {
+public class RightOrWrongView extends View {
     private int angle = 0;//角度
     private int r;//半径
     private List<Point> circleList = new ArrayList<Point>();
@@ -38,11 +38,11 @@ public class CircleView extends View {
     public static final boolean RIGHT = true;
     public static final boolean WRONG = false;
     private boolean correctFlag;
-    public CircleView(Context context) {
+    public RightOrWrongView(Context context) {
         super(context);
     }
 
-    public CircleView(Context context, AttributeSet attrs) {
+    public RightOrWrongView(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray mTypedArray = context.obtainStyledAttributes(attrs, R.styleable.circle);
         mWidth = mTypedArray.getDimension(R.styleable.circle_circleWidth, 0);
